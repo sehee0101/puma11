@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PUMA 추리게임</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="img/favicon.ico" rel="icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ✅ Carousel Start (바로 시작하도록 수정) -->
+  <div class="container-fluid p-0 mb-5 pb-5">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="w-100" src="img/메인사진.png" alt="Image">
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-10" style="max-width: 900px;">
+              <h4 class="text-white text-uppercase mb-md-5">IASA PUMA 추리게임</h4>
+              <h1 class="display-3 text-white mb-md-4">공항편</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel End -->
+
+
+  <!-- About Start -->
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <h1 class="section-title position-relative text-center mb-5">상황 설명</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 py-5">
+          <h4 class="font-weight-bold mb-3">사건 설명</h4>
+          <h5 class="text-muted mb-3">여행의 설렘이 가득한 공항에서 <br>당신은 매우 복잡한 살인 사건을<br> 만났습니다.<br>
+            백주 대낮에 그것도 보안이 철저한 <br>공공장소에서 갑자기 한 여성이 쓰러지고 말았습니다.<br> 도대체 왜 이런 일이 일어난 건지 진실을<br> 알아차린 사람은 아무도 없습니다.<br>
+            당신처럼 유능한 탐정이 필요합니다.<br>
+          </h5>
+        </div>
+        <div class="col-lg-4" style="min-height: 400px;">
+          <div class="position-relative h-100 rounded overflow-hidden">
+            <img class="position-absolute w-100 h-100" src="img/메인사진.png" style="object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-4 py-5">
+          <p>탐정이 되어 용의자 4명 중 누가 범인인지를<br> 찾아주세요</p>
+          <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>용의자1: 김배낭</h5>
+          <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>용의자2: 이캐리</h5>
+          <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>용의자3: 박서류</h5>
+          <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>용의자4: 강소형</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+
+
+
+<!-- ✅ 사건 현장 사진 확인란 (용의자 캐러셀 위에 배치) -->
+<div class="container-fluid py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title position-relative mb-3" style="color: white;">사건 현장 사진 확인</h2>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <!-- 클릭 시 모달 열기 -->
+      <a href="#" data-toggle="modal" data-target="#scenePhotoModal">
+        <img src="img/사건현장.png"
+             alt="사건 현장 미리보기"
+             class="img-fluid rounded shadow-lg"
+             style="max-width: 700px; cursor: pointer; transition: transform 0.3s;">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 확대 모달 -->
+<div class="modal fade" id="scenePhotoModal" tabindex="-1" role="dialog" aria-labelledby="scenePhotoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">사건 현장 사진 확대 보기</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="img/사건현장.png" class="img-fluid rounded" alt="사건 현장 사진 확대">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <!-- ✅ 용의자 캐러셀 -->
+<div class="owl-carousel service-carousel">
+  <!-- 용의자 1 -->
+  <div class="service-item">
+    <div class="service-img mx-auto">
+      <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/김배낭.png" style="object-fit: cover;">
+    </div>
+    <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+      <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">용의자1: 김배낭</h5>
+      <a href="#" class="border-bottom border-secondary text-decoration-none text-secondary"
+         data-toggle="modal" data-target="#bag1">배낭 조사하기</a>
+    </div>
+  </div>
+
+  <!-- 용의자 2 -->
+  <div class="service-item">
+    <div class="service-img mx-auto">
+      <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/이캐리.png" style="object-fit: cover;">
+    </div>
+    <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+      <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">용의자2: 이캐리</h5>
+      <a href="#" class="border-bottom border-secondary text-decoration-none text-secondary"
+         data-toggle="modal" data-target="#bag2">캐리어 조사하기</a>
+    </div>
+  </div>
+
+  <!-- 용의자 3 -->
+  <div class="service-item">
+    <div class="service-img mx-auto">
+      <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/박서류.png" style="object-fit: cover;">
+    </div>
+    <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+      <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">용의자3: 박서류</h5>
+      <a href="#" class="border-bottom border-secondary text-decoration-none text-secondary"
+         data-toggle="modal" data-target="#bag3">서류가방 조사하기</a>
+    </div>
+  </div>
+
+  <!-- 용의자 4 -->
+  <div class="service-item">
+    <div class="service-img mx-auto">
+      <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/강소형.png" style="object-fit: cover;">
+    </div>
+    <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+      <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">용의자4: 강소형</h5>
+      <a href="#" class="border-bottom border-secondary text-decoration-none text-secondary"
+         data-toggle="modal" data-target="#bag4">소형캐리어 조사하기</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ 모달창들 (사진 표시용) -->
+<div class="modal fade" id="bag1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">김배낭의 배낭</h5>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/배낭 조사하기.png" class="img-fluid rounded" alt="배낭 내용">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="bag2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">이캐리의 캐리어</h5>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/캐리어.png" class="img-fluid rounded" alt="캐리어 내용">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="bag3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">박서류의 서류가방</h5>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/서류가방.png" class="img-fluid rounded" alt="서류가방 내용">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="bag4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">강소형의 소형캐리어</h5>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/소형캐리어.png" class="img-fluid rounded" alt="소형캐리어 내용">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ✅ 증거 확보 자료 확인란 (용의자 캐러셀 바로 아래에 추가) -->
+<div class="container-fluid py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title position-relative mb-3">증거 확보 자료 확인</h2>
+        <p class="text-muted mb-0">각 증거를 눌러 이미지를 확인하세요.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 증거 1 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#evidence1">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거1_주변사진.png" class="card-img-top" alt="증거1: 주변 사진" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 1</h5>
+              <p class="card-text text-muted mb-0">주변 사진</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 2 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#evidence2">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거2_사건현장.png" class="card-img-top" alt="증거2: 사건 현장 사진" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 2</h5>
+              <p class="card-text text-muted mb-0">사건 현장 사진</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 3 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#evidence3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거3_비행기표.png" class="card-img-top" alt="증거3: 피해자의 비행기표" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 3</h5>
+              <p class="card-text text-muted mb-0">피해자의 비행기표</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 모달들 -->
+<div class="modal fade" id="evidence1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 1: 주변 사진</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거1_주변사진.png" class="img-fluid rounded" alt="증거1: 주변 사진">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="evidence2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 2: 사건 현장 사진</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거2_사건현장.png" class="img-fluid rounded" alt="증거2: 사건 현장 사진">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="evidence3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 3: 피해자의 비행기표</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거3_비행기표.png" class="img-fluid rounded" alt="증거3: 피해자의 비행기표">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <!-- Testimonial (제출 안내) -->
+  <div class="container-fluid py-5 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="section-title position-relative text-center mb-5">
+            용의자들의 가방, <br>증거 확보 내용 등을 <br>조사하여<br> 최종 범인을 찾아서<br> 제출해주세요.
+          </h1>
+
+          <a href="https://forms.gle/YdwDgGtTbysjNui19" target="_blank" rel="noopener" class="btn btn-primary px-4 py-2">
+            제출 페이지 열기
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
